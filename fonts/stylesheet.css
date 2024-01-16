@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'PP Telegraf';
+    src: url('PPTelegraf-Regular.eot');
+    src: url('PPTelegraf-Regular.eot?#iefix') format('embedded-opentype'),
+        url('PPTelegraf-Regular.woff2') format('woff2'),
+        url('PPTelegraf-Regular.woff') format('woff'),
+        url('PPTelegraf-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Telegraf';
+    src: url('PPTelegraf-UltraBold.eot');
+    src: url('PPTelegraf-UltraBold.eot?#iefix') format('embedded-opentype'),
+        url('PPTelegraf-UltraBold.woff2') format('woff2'),
+        url('PPTelegraf-UltraBold.woff') format('woff'),
+        url('PPTelegraf-UltraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
