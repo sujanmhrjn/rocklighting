@@ -1,0 +1,14 @@
+*{
+    font:400 14px $primary-font;
+}
+a{
+    text-decoration: none;
+    transition:all 0.3s ease;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+img{
+    max-width: 100%;
+}

@@ -1,0 +1,17 @@
+.m-banner{
+    .banner-text{
+        text-align: center;
+        .title{
+            font:700 62px $primary-font;
+            margin-bottom: 10px;
+        }
+        .description{
+            font-size:22px;
+            line-height:1.6;
+            padding:0 16px;
+        }
+    }
+    .images{
+        padding:75px 56px;
+    }
+}

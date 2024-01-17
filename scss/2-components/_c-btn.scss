@@ -1,0 +1,29 @@
+.c-btn{
+    background-color: $primary;
+    color:#fff;
+    font: 500 18px $secondary-font;
+    display: inline-flex ;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    &::after{
+        content:'';
+        display: block;
+        height: 24px;
+        width: 24px;
+        background:url('../images/icon-upright-arrow.svg') no-repeat center center/ contain;
+        margin-left:2px;
+    }
+
+    &:hover{
+        background-color: $primary-2;
+        color:#fff;
+    }
+
+    &--2{
+        font:700 18px $primary-font;
+        padding: 22px 16px 22px 32px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
