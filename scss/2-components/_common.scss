@@ -12,3 +12,84 @@ a{
 img{
     max-width: 100%;
 }
+.page-section{
+    padding: 85px 0;
+}
+.text-header-block {
+    border-bottom: 1px solid #000;
+    padding-bottom: 22px;
+    margin-bottom: 30px;
+}
+
+
+.arrow{
+    height: 32px;
+    width: 32px;
+    border-radius: 100px;
+    background-color: #fff;
+    border:1px solid #dedede;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:50%;
+    left:16px;
+    transform: translateY(-50%);
+    margin-top:16px;
+    z-index: 1;
+    cursor: pointer;
+    &.arrow-right{
+        right:16px;
+        left:auto;
+    }
+    &:hover{
+        background-color: $primary;
+        svg,
+        svg > *,
+        svg{
+                fill:#fff !important;
+            }
+        
+    }
+
+    @include custom_min(992px){
+        height: 64px;
+        width: 64px;
+
+        svg{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.slick-dots{
+   bottom: -55px;
+   li{
+        button{
+            height:15px;
+            width:15px;
+            border:1px solid $primary;
+            border-radius: 100px;
+            &::before{
+                display:none;
+            }
+        }
+
+        &.slick-active{
+            button{
+                background-color:$primary;
+            }
+        }
+    }
+}
+
+.max-w-100{
+    max-width: 100% !important;
+}
+
+.container{
+    @include custom_min(1600px){
+        max-width: 1440px;
+    }
+}

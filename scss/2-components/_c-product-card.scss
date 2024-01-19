@@ -1,0 +1,25 @@
+.c-product-card{
+    border:1px solid #dedede;
+    padding:0 25px 30px;
+    background-color: #fff;
+    .product-icon{
+        height:80px;
+        width:80px;
+        border-radius: 100px;
+        background-color: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top:-40px;
+        margin:0 auto -40px;
+    }
+    .product-text{
+        padding: 24px 0;
+        h3{
+            color:#000;
+            text-align: center;
+            font:500 28px $secondary-font;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.c-anchor-text{
+    font-size: 16px;
+    font-family: $primary-font;
+    display: flex;
+    align-items: center;
+    &::after{
+        content:"";
+        display: block;
+        height: 24px;
+        width: 24px;
+        background: url('../images/icon-upright-arrow-black.svg') no-repeat center center/ contain;
+        margin-left:2px;
+    }
+}

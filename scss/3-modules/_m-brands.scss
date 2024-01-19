@@ -1,0 +1,38 @@
+.m-brands{
+   position: relative;
+   z-index: 9;
+   margin-top:20px;
+    .title{
+        border-top:1px solid #000;
+        position: relative;
+    }
+    h2{
+        font:14px $primary-font;
+        letter-spacing:4px;
+        background-color: #fff;
+        position: relative;
+        margin-bottom: -10px;
+        top:-8px;
+        display: inline-block;
+        padding-right:15px;
+        @include custom_min(992px){
+            
+        }
+    }
+
+    .items{
+        border-bottom:1px solid #000;
+        padding-bottom: 10px;
+    }
+    .item{
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:30px 20px;
+        }
+        img{
+            height: 30px;
+        }
+    }
+}
