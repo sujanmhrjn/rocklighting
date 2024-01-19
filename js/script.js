@@ -18,40 +18,40 @@ if($(".js-banner-carousel").length > 0){
 
 if($(".js-brands").length > 0){
    function loadBrandsSlick(){
-        if($(window).width() < 1200){
-            $(".js-brands").not('.slick-initialized').slick({
-                slidesToShow: 3.5,
-                slideToScroll:1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                mobileFirst: true,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 4
-                        }
-                    },
-                    {
-                        breakpoint: 920,
-                        settings: {
-                            slidesToShow: 5
-                        }
+        $(".js-brands").not('.slick-initialized').slick({
+            slidesToShow: 6,
+            slideToScroll:0,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 920,
+                    settings: {
+                        slidesToShow: 5
                     }
-                ]
-            
-            });
-        }else{
-            $(".js-brands.slick-initialized").slick('unslick')
-        }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                },
+                {
+                    breakpoint: 660,
+                    settings: {
+                        slidesToShow: 3.5
+                    }
+                }
+            ]
+        });
+        
     }
     loadBrandsSlick();
-    $(window).on("resize", function(){
-        loadBrandsSlick();
-    })
+   
 }
 
 if($(".js-products").length > 0){
+
     $(".js-products").slick({
         slidesToShow:1,
         slideToScroll:1,
@@ -112,6 +112,13 @@ if($(".js-testimonials").length > 0){
 if($(".js-match-height-excerpt").length > 0){
     $(".js-match-height-excerpt").matchHeight({
         byRow:true,
+        property: 'min-height'
+    })
+}
+
+if($(".js-social-match-height").length > 0){
+    $(".js-social-match-height").matchHeight({
+        byRow: true,
         property: 'min-height'
     })
 }

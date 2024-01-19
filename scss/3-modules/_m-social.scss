@@ -43,6 +43,9 @@
        div[class^="col-"]{
         .social-item{
             margin-bottom: 120px;
+            @include custom_min(992px){
+                margin-bottom:0;
+            }
         }
         &:last-child{
             margin-bottom: 0;
