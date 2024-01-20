@@ -1,12 +1,41 @@
 .m-quote{
     padding:80px 0 0;
     background-color: $primary-light;
+    position: relative;
+
     .text{
         padding:0 16px;
         margin-bottom: 50px ;
         text-align: center;
         .c-section-header{
             margin-bottom: 25px;
+        }
+    }
+
+    @include custom_min(992px){
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        .text{
+            text-align: left;
+        }
+    }
+
+    @include custom_min(1200px){
+        background:url('../images/pattern-2.svg') no-repeat right center;
+        background-size: 70%;
+        padding-top:60px;
+        padding-bottom: 60px;
+        .text{
+            max-width: 495px;
+        }
+        .image{
+            width: 100%;
+            padding-right: 68px;
+            img{
+                width: 100%;
+            }
         }
     }
 }

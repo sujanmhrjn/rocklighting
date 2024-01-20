@@ -2,6 +2,9 @@
     background:url('../images/banner-tiktok-insta.png') no-repeat top center/ cover;
     padding-bottom: 0;
     position: relative;
+    @include custom_min(1200px){
+        padding-top:315px;
+    }
     &::after{
         position: absolute;
         right:0;
@@ -22,6 +25,9 @@
         margin-bottom:50px;
         img{
             height:30px;
+            @include custom_min(992px){
+                height:70px;
+            }
         }
     }
 

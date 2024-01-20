@@ -3,5 +3,43 @@
    .product-items{
     padding-left:16px;
     padding-right:16px;
+    @include custom_min(992px){
+        padding:0;
+        margin:0 -10px;
+        .row-item{
+            padding:0 10px;
+        }
+    }
+   }
+   .c-section-header--2{
+    @include custom_min(992px){
+        font-size: 48px;
+    }
+   }
+   @include custom_min(1200px){
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    
+   }
+   @include custom_min(992px){
+    .arrow{
+        &.arrow-left{
+            left:-20px;
+        }
+        &.arrow-right{
+            right:-20px;
+        }
+    }
+   }
+   @include custom_min(1200px){
+    .arrow{
+        &.arrow-left{
+            left:-60px;
+        }
+        &.arrow-right{
+            right:-60px;
+        }
+    }
    }
 }

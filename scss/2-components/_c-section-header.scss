@@ -2,5 +2,8 @@
     font:700 62px $primary-font;
     &--2{
         font-size: 28px;
+        @include custom_min(1200px){
+            font-size: 86px;
+        }
     }
 }

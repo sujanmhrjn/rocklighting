@@ -1,9 +1,47 @@
 .m-products{
-    padding:100px 0;
- 
+    padding:100px 52px;
+    position: relative;
+    &::before{
+        content:"";
+        display: block;
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        background: url('../images/dots-pattern-2.svg') no-repeat center center/ cover;
+
+        @include custom_min(992px){
+            top:68px;
+            bottom:-150px;
+        }
+    }
+    @include custom_min(992px){
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @include custom_min(1200px){
+        padding-left: 52px;
+        padding-right: 52px;
+    }
+    .product-items{
+        margin:0 -52px;
+        @include custom_min(992px){
+            margin:0 -30px;
+        }
+    }
     .item{
         padding:40px 32px 0 !important;
+        @include custom_min(992px){
+            margin-bottom: 40px;
+            padding-left: 16px !important;
+            padding-right:16px !important;
+        
+        }
+
+        @include custom_min(1200px){
+            padding: 40px 52px 0 !important;
+        }
     }
 
- 
 }

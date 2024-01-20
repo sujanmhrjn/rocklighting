@@ -1,33 +1,91 @@
 .m-testimonial{
     position: relative;
     padding-bottom: 284px;
+   
+    @include custom_min(1200px){
+        padding-bottom: 0;
+    }
     .banner-image{
         position: absolute;
         bottom:0;
         left:0;
         right:0;
         height: 100%;
+        width:100%;
         object-fit: cover;
         object-position: bottom right;
+        @include custom_min(1200px){
+            position: relative;
+            display: block;
+            margin: 0 auto;
+        }
     }
     .text{
         padding: 72px 32px 55px;
-        border-top:1px solid $gray-100;
+        // border-top:1px solid $gray-100;
         position: relative;
-        background-color: #fff; 
+        &::after{
+            content:"";
+            display: block;
+            position: absolute;
+            top:0;
+            right:0;
+            height: 100%;
+            width: 100%;
+            background:url('../images/testimonial-pattern.svg') no-repeat right top;
+            background-size: center;
+            right: 0%;
+            left: 0;
+            background-size: cover;
+            background-position: calc(100% + 150px) 0;
+        
+        }
+
+        @include custom_min(1200px){
+            position: absolute;
+            left:0;
+            bottom:-70px;
+            width:52%;
+            z-index: 1;
+            padding-bottom:90px;
+            &::after{
+                background-position: right center;
+              
+            }
+        }
+    }
+    .text-content{
+        position: relative;
+        z-index: 10;
+        padding-bottom: 30px;
+      @include custom_min(992px){
+        max-width:550px;
+        margin-left:55px;
+      }
     }
     .text-header{
         margin-bottom: 34px;
+      
        h2{
         font-size: 38px;
         font-weight: 700;
        }
+    }
+    .items{
+   
+        z-index: 10;
     }
     .item-description{
         font-size: 16px;
         color:#0A0E11;
         margin-bottom: 48px;
         line-height: 1.4;
+        padding-right:50px;
+        @include custom_min(992px){
+            font-size:24px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
     }
     .item-author{
         position: relative;
@@ -58,11 +116,40 @@
 
     .arrow{
         position:absolute;
-        right: 32px;
-        top:78px;
+        right: 0;
+        top:6px;
         &-left{
             left:auto;
-            right:80px;
+            right:40px;
         }
+    }
+
+    .testimonial-arrow{
+        position: absolute;
+        z-index: 99;
+        left:0;
+        right:0;
+        top:62px;
+
+       .container{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+       }
+
+       .arrow{
+        position: relative;
+        top:0;
+        transform:translate(0);
+        &.arrow-left{
+            right:0;
+            margin-right:15px;
+        }
+       }
+       @include custom_min(992px){
+        top:30px;
+        right:80px;
+       }
     }
 }

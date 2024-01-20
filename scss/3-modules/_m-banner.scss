@@ -1,4 +1,5 @@
 .m-banner{
+    overflow: hidden;
     .banner-item{
         position: relative;
         &::before{
@@ -18,8 +19,17 @@
             z-index: 1;
         }
         @include custom_min(992px){
-            padding-top:75px;
-            padding-bottom: 60px;
+            // padding-top:75px;
+            // padding-bottom: 60px;
+        }
+
+        .image-container{
+            position: relative;
+            @include custom_min(992px){
+                padding-top:75px;
+                padding-bottom: 60px;
+             
+            }
         }
     }
     .banner-image{
@@ -34,19 +44,37 @@
         text-align: center;
         padding-top:48px;
         .title{
-            font:700 62px $primary-font;
+            font:700 42px $primary-font;
             margin-bottom: 10px;
+            @include custom_min(420px){
+                font-size: 62px;
+            }
+            
         }
+        
         .description{
-            font-size:22px;
+            font-size:18px;
             line-height:1.6;
             padding:0 16px;
             margin-bottom:25px;
+            @include custom_min(420px){
+                font-size: 22px;
+            }
         }
-
         @include custom_min(992px){
             padding-top:0;
             text-align: left;
+     
+            .description{
+                padding:0;
+            }
+            .c-btn{
+                max-width: 320px;
+            }
+
+        }
+        @include custom_min(1200px){
+         
             .title{
                 font-size: 100px;
             }
@@ -54,10 +82,10 @@
                 padding:0;
                 max-width: 500px;
             }
-            .c-btn{
-                max-width: 320px;
-            }
+
         }
+
+       
     }
     .images{
         padding:75px 56px;
@@ -67,9 +95,38 @@
             }
         }
         @include custom_min(992px){
+            padding-left:0;
             padding-top: 0;
             padding-bottom: 0;
+        }
+        @include custom_min(1200px){
+            padding-top:0;
+            padding-bottom: 0;
             padding-left: 40px;
+        }
+    }
+
+    .banner-pattern{
+        position: absolute;
+
+        right:0;
+        z-index: 1;
+        bottom:0;
+        height: 80%;
+        min-height: 500px;
+        width: 100%;
+        min-width: 500px;
+        object-fit: contain;
+        object-position: bottom;
+        transform:translateX(58%);
+        @include custom_min(992px){
+            // // transform:translateX(20%);
+            // right:10%;
+            left:auto;
+            object-fit: contain;
+            height: 100%;
+            max-width: auto;
+            transform:translateX(0)
         }
     }
 
@@ -78,9 +135,25 @@
             &.arrow-left,
             &.arrow-right{
                 left: auto;
-                right:-30px;
+                right:-10px;
                 top:50%;
                 transform: translateY(-50%);
+            }
+            &.arrow-left{
+                margin-top:-34px;
+            }
+            &.arrow-right{
+                margin-top:34px;
+            }
+        }
+    }
+    @include custom_min(1200px){
+        .arrow{
+            &.arrow-left,
+            &.arrow-right{
+ 
+                right:-30px;
+
             }
             &.arrow-left{
                 margin-top:-38px;

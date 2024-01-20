@@ -63,7 +63,7 @@
    .header__top{
         background-color: $blue-100;
         display: none;
-        @include custom_min(992px){
+        @include custom_min(1200px){
             display: block;
             font-size: 12px;
         }

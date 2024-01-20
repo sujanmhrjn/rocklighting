@@ -1,0 +1,94 @@
+
+.m-mission{
+    position: relative;
+    margin-bottom: 160px;
+    padding-top:65px;
+    &::before{
+        content:"";
+        display: block;
+        position: absolute;
+        right:0;
+        top:0;
+        bottom:-240px;
+        left:0;
+        background: url('../images/pattern-mission.svg') no-repeat right;
+    }
+    .banner-image{
+        
+            position: relative;
+            display: block;
+            margin: 0 auto;
+        
+    }
+    .text{
+        padding: 72px 32px 55px;
+        // border-top:1px solid $gray-100;
+        margin-bottom: 30px;
+        position: relative;
+        &::after{
+            content:"";
+            display: block;
+            position: absolute;
+            top:0;
+            height: 100%;
+            width: 100%;
+            background:url('../images/mission-pattern.svg') no-repeat;
+            background-size: center;
+            right: 0%;
+            background-size: cover;
+            background-position: 0 o
+        
+        }
+
+        @include custom_min(992px){
+            position: absolute;
+            right:0;
+            bottom:0;
+            width:100%;
+            z-index: 1;
+            padding-bottom:50px;
+            &::after{
+                background-position: left center;
+              
+            }
+        }
+        @include custom_min(1200px){
+            width:55%;
+        }
+    }
+    .text-content{
+        position: relative;
+        z-index: 10;
+        padding-bottom: 30px;
+      @include custom_min(992px){
+        max-width:580px;
+        margin-left:205px;
+      }
+    }
+    .text-header{
+        margin-bottom: 20px;
+      
+       h2{
+        font-size: 38px;
+        font-weight: 700;
+        @include custom_min(1200px){
+            font-size: 80px;
+        }
+       }
+    }
+    .item-description{
+        font-size: 16px;
+        color:#0A0E11;
+        margin-bottom: 48px;
+        line-height: 1.4;
+   
+        @include custom_min(992px){
+            font-size:18px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+    }
+    
+    
+    
+}

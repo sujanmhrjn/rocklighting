@@ -12,7 +12,66 @@
         display: flex;
     }
     .nav-menu{
-        display: none;
+        display: block;
+        position: fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        background-color: #fff;
+        z-index: 9999;
+        min-width: 300px;
+        transform:translateX(100%);
+        transition:all 0.4s ease;
+        .nav-close{
+            color:#fff;
+            font-size: 32px;
+            position: relative;
+            left:-40px;
+            cursor: pointer;
+            visibility: hidden;
+        }
+        &.active{
+            transform:translateX(0);
+            .nav-close{
+                visibility: visible;
+            }
+        }
+        
+    
+        ul{
+            list-style: none;
+            margin:0;
+            padding:0  10px;
+         
+            li{
+                // padding:0 35px;
+                padding: 0 12px;
+                a{
+                    color:#000;
+                    font-size: 16px;
+                    display: block;
+                    padding: 16px 0;
+                    border-bottom:1px solid #dedede;
+                }
+            }
+        }
+    }
+
+    .nav-menu-overlay{
+        background-color: #000;
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        z-index: 99;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s linear;
+        &.active{
+            opacity: 0.5;
+            visibility: visible;
+        }
     }
     button{
         border:none;
@@ -47,7 +106,7 @@
     }
 
     .trigger-menu{
-        @include custom_min(992px){
+        @include custom_min(1200px){
             display: none;
         }
     }
@@ -60,8 +119,16 @@
             width: 100%;
         }
 
+    
+    }
+    @include custom_min(1200px){
         .nav-menu{
             display: block;
+            position: relative;
+            transform:translateX(0);
+            .nav-close{
+                display: none;
+            }
             ul{
                 list-style: none;
                 margin:0;
@@ -70,20 +137,26 @@
                 align-items: center;
                 li{
                     // padding:0 35px;
-                    padding: 0 12px;
+                    padding: 0 10px;
                     a{
                         color:#000;
                         font-size: 14px;
+                        border:none;
+                        padding:0;
                     }
                 }
             }
-            @include custom_min(1200px){
-                ul{
-                    li{
-                        padding:0 20px;
-                        a{
-                            font-size: 16px;
-                        }
+           
+        }
+    }
+
+    @include custom_min(1600px){
+        .nav-menu{
+            ul{
+                li{
+                    padding:0  28px;
+                    a{
+                        font-size: 16px;
                     }
                 }
             }
