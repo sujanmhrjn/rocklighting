@@ -274,3 +274,35 @@ $(document).on("click", '.nav-close, .nav-menu-overlay', function(){
     $(".nav-menu-overlay").removeClass('active');
     $("body").css("overflow", 'visible');
 })
+
+$(document).on("click", '.dropdown-content__title', function(){
+    $(this).parent('.dropdown-content').removeClass('active');
+})
+
+$(document).on("click", '.dropdown-title', function(){
+
+    $(this).parent('.dropdown-item').find('.dropdown-content').addClass('active');
+})
+
+$(document).on("click", '.nav-menu__dropdown > a', function(){
+    $(this).parent().find('.nav-menu__dropdown-block').addClass('active');
+})
+
+$(document).on("click", '.nav-menu__dropdown-block.active .dropdown-item__group', function(){
+    $(this).closest('.nav-menu__dropdown-block').removeClass('active');
+})
+// $(document).on("focus", '.nav-menu__dropdown-block', function(){
+//     $targetImg= $(this).find('.nav-menu__dropdown-block .nav-hover-image');  
+//     $targetImg.attr('src', $(this).find('.nav-menu__dropdown-block').attr('data-img'))
+// })
+
+
+$(document).on('mouseover', '.nav-menu__dropdown-block .dropdown-content a', function(){
+    var $targetImg= $(this).closest('.nav-menu__dropdown-block').find('.nav-hover-image');  
+    $targetImg.attr('src', $(this).closest('.nav-menu__dropdown-block').attr('data-img'))
+    if($(this).attr('data-hover-img')){
+        $targetImg.attr('src', $(this).attr('data-hover-img'))
+    }
+})
+
+
