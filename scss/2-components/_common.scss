@@ -113,6 +113,11 @@ img{
         max-width: 1440px;
     }
 }
+.container-xl{
+    @include custom_min(1600px){
+        max-width: 1440px;
+    }
+}
 
 .w-lg-auto{
     @include custom_min(992px){
