@@ -45,5 +45,9 @@
                 color:rgba($black, 0.5);
             }
         }
+
+        @include custom_min(992px){
+            padding:0;
+        }
     }
 }

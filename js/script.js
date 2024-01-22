@@ -31,7 +31,7 @@ if($(".banner-pattern").length > 0){
             $(".banner-pattern").css({'object-position': `${targetWidth}px 0`});
 
         }else{
-            $(".banner-pattern").css('object-position', 0)
+            $(".banner-pattern").css('object-position', 'bottom')
         }
     }
     bannerPatternFunction();
@@ -132,7 +132,7 @@ if($(".js-product-items").length > 0){    $(".js-product-items").slick({
                     </div>`,
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1366,
                 settings: {
                     slidesToShow: 3
                 }
@@ -227,6 +227,13 @@ if($(".js-social-match-height").length > 0){
     $(".js-social-match-height").matchHeight({
         byRow: true,
         property: 'min-height'
+    })
+}
+
+if($(".js-match-height-description").length > 0){
+    $(".js-match-height-description").matchHeight({
+        byRow:true,
+        property:'min-height'
     })
 }
 

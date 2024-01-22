@@ -35,10 +35,20 @@
    @include custom_min(1200px){
     .arrow{
         &.arrow-left{
-            left:-60px;
+            left:-50px;
         }
         &.arrow-right{
-            right:-60px;
+            right:-50px;
+        }
+    }
+   }
+   @include custom_min(1440px){
+    .arrow{
+        &.arrow-left{
+            left:-90px;
+        }
+        &.arrow-right{
+            right:-90px;
         }
     }
    }
