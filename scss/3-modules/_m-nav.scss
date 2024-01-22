@@ -327,7 +327,7 @@
                 right:0;
                 bottom:auto;
                 background-color: #fff;
-                transform:translate(0);
+                transform: none;
      
                 display: none;
                 box-shadow:0 0 10px 10px rgba(0,0,0,0.03);
@@ -358,7 +358,7 @@
                 }
                 .dropdown-content{
                     position: relative;
-                    transform:translate(0);
+                    transform:none;
                     padding:0;
                     &__title{
                         display: none;
